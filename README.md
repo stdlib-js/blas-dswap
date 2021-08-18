@@ -179,9 +179,9 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [blas]: http://www.netlib.org/blas
 
-[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/stdlib
+[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/blas-base-dswap
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
 
 </section>
 
