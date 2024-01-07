@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2020 The Stdlib Authors.
@@ -16,17 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* BLAS level 1 routine to interchange two double-precision floating-point vectors.
+* Interchanges two double-precision floating-point vectors.
 *
-* @module @stdlib/blas-dswap
+* @param x - first input array
+* @param y - second input array
+* @throws first argument must be a 1-dimensional `ndarray` containing double-precision floating-point numbers
+* @throws second argument must be a 1-dimensional `ndarray` containing double-precision floating-point numbers
+* @throws input arrays must be the same length
+* @returns `y`
 *
 * @example
 * var Float64Array = require( '@stdlib/array-float64' );
 * var array = require( '@stdlib/ndarray-array' );
-* var dswap = require( '@stdlib/blas-dswap' );
 *
 * var x = array( new Float64Array( [ 4.0, 2.0, -3.0, 5.0, -1.0 ] ) );
 * var y = array( new Float64Array( [ 2.0, 6.0, -1.0, -4.0, 8.0 ] ) );
@@ -39,12 +47,9 @@
 * var ybuf = y.data;
 * // returns <Float64Array>[ 4.0, 2.0, -3.0, 5.0, -1.0 ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function dswap( x: ndarray, y: ndarray ): ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = dswap;
