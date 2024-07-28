@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@deno/mod.js';
+import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@v0.2.2-deno/mod.js';
 ```
 
 #### dswap( x, y )
@@ -100,7 +100,7 @@ The function has the following parameters:
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@deno/mod.js';
+import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@v0.2.2-deno/mod.js';
 
 var x = array( new Float64Array( 10 ) );
 var y = array( new Float64Array( 10 ) );
