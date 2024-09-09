@@ -41,23 +41,41 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-dswap
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@deno/mod.js';
+var dswap = require( '@stdlib/blas-dswap' );
 ```
 
-#### dswap( x, y )
+#### dswap( x, y\[, dim] )
 
 Interchanges two double-precision floating-point vectors `x` and `y`.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var array = require( '@stdlib/ndarray-array' );
 
 var x = array( new Float64Array( [ 4.0, 2.0, -3.0, 5.0, -1.0 ] ) );
 var y = array( new Float64Array( [ 2.0, 6.0, -1.0, -4.0, 8.0 ] ) );
@@ -73,8 +91,36 @@ var ybuf = y.data;
 
 The function has the following parameters:
 
--   **x**: a 1-dimensional [`ndarray`][@stdlib/ndarray/array] whose underlying data type is `float64`.
--   **y**: a 1-dimensional [`ndarray`][@stdlib/ndarray/array] whose underlying data type is `float64`.
+-   **x**: a non-zero-dimensional [`ndarray`][@stdlib/ndarray/ctor] whose underlying data type is `float64`. Must have the same shape as `y`.
+-   **y**: a non-zero-dimensional [`ndarray`][@stdlib/ndarray/ctor] whose underlying data type is `float64`. Must have the same shape as `x`.
+-   **dim**: dimension along which to interchange vectors. Must be a negative integer. Negative indices are resolved relative to the last array dimension, with the last dimension corresponding to `-1`. Default: `-1`.
+
+For multi-dimensional input [`ndarrays`][@stdlib/ndarray/ctor], the function performs batched computation, such that the function interchanges each pair of vectors in `x` and `y` according to the specified dimension index.
+
+```javascript
+var Float64Array = require( '@stdlib/array-float64' );
+var array = require( '@stdlib/ndarray-array' );
+
+var opts = {
+    'shape': [ 2, 3 ]
+};
+var x = array( new Float64Array( [ 4.0, 2.0, -3.0, 5.0, -1.0, 3.0 ] ), opts );
+var y = array( new Float64Array( [ 2.0, 6.0, -1.0, -4.0, 8.0, 2.0 ] ), opts );
+
+var v1 = x.get( 0, 0 );
+// returns 4.0
+
+var v2 = y.get( 0, 0 );
+// returns 2.0
+
+dswap( x, y );
+
+v1 = x.get( 0, 0 );
+// returns 2.0
+
+v2 = y.get( 0, 0 );
+// returns 4.0
+```
 
 </section>
 
@@ -84,6 +130,9 @@ The function has the following parameters:
 
 ## Notes
 
+-   Both input [`ndarrays`][@stdlib/ndarray/ctor] must have the same shape.
+-   Negative indices are resolved relative to the last [`ndarray`][@stdlib/ndarray/ctor] dimension, with the last dimension corresponding to `-1`.
+-   For multi-dimensional [`ndarrays`][@stdlib/ndarray/ctor], batched computation effectively means swapping all of `x` with all of `y`; however, the choice of `dim` will significantly affect performance. For best performance, specify a `dim` which best aligns with the [memory layout][@stdlib/ndarray/orders] of provided [`ndarrays`][@stdlib/ndarray/ctor]. 
 -   `dswap()` provides a higher-level interface to the [BLAS][blas] level 1 function [`dswap`][@stdlib/blas/base/dswap].
 
 </section>
@@ -97,28 +146,28 @@ The function has the following parameters:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var array = require( '@stdlib/ndarray-array' );
+var dswap = require( '@stdlib/blas-dswap' );
 
-var x = array( new Float64Array( 10 ) );
-var y = array( new Float64Array( 10 ) );
+var opts = {
+    'dtype': 'float64'
+};
 
-var rand1 = discreteUniform.factory( 0, 100 );
-var rand2 = discreteUniform.factory( 0, 10 );
+var x = array( discreteUniform( 10, 0, 100, opts ), {
+    'shape': [ 5, 2 ]
+});
+console.log( ndarray2array( x ) );
 
-var i;
-for ( i = 0; i < x.length; i++ ) {
-    x.set( i, rand1() );
-    y.set( i, rand2() );
-}
-console.log( x.data );
-console.log( y.data );
+var y = array( discreteUniform( 10, 0, 10, opts ), {
+    'shape': x.shape
+});
+console.log( ndarray2array( y ) );
 
 dswap( x, y );
-console.log( x.data );
-console.log( y.data );
+console.log( ndarray2array( x ) );
+console.log( ndarray2array( y ) );
 ```
 
 </section>
@@ -150,7 +199,7 @@ console.log( y.data );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -215,15 +264,17 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [blas]: http://www.netlib.org/blas
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/deno
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+
+[@stdlib/ndarray/orders]: https://github.com/stdlib-js/ndarray-orders
+
+[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/blas-base-dswap
 
 <!-- <related-links> -->
 
-[@stdlib/blas/base/dswap]: https://github.com/stdlib-js/blas-base-dswap/tree/deno
+[@stdlib/blas/gswap]: https://github.com/stdlib-js/blas-gswap
 
-[@stdlib/blas/gswap]: https://github.com/stdlib-js/blas-gswap/tree/deno
-
-[@stdlib/blas/sswap]: https://github.com/stdlib-js/blas-sswap/tree/deno
+[@stdlib/blas/sswap]: https://github.com/stdlib-js/blas-sswap
 
 <!-- </related-links> -->
 
