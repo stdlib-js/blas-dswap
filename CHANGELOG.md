@@ -16,12 +16,23 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`8b1f86b`](https://github.com/stdlib-js/stdlib/commit/8b1f86b855e9f11a36ccf7f58a611650bf210078) - prevent writing to read-only ndarrays
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="commits">
 
 ### Commits
 
 <details>
 
+-   [`8b1f86b`](https://github.com/stdlib-js/stdlib/commit/8b1f86b855e9f11a36ccf7f58a611650bf210078) - **fix:** prevent writing to read-only ndarrays _(by Athan Reines)_
 -   [`2e25339`](https://github.com/stdlib-js/stdlib/commit/2e2533970e09cb59f3533d474ec32756f4ca4f81) - **feat:** add support for batched computation _(by Athan Reines)_
 
 </details>

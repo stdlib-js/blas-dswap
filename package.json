@@ -44,6 +44,7 @@
     "@stdlib/assert-is-negative-integer": "^0.2.2",
     "@stdlib/blas-base-dswap": "^0.3.0",
     "@stdlib/math-base-special-fast-min": "^0.3.0",
+    "@stdlib/ndarray-base-assert-is-read-only": "^0.2.2",
     "@stdlib/ndarray-base-ndarraylike2ndarray": "github:stdlib-js/ndarray-base-ndarraylike2ndarray#main",
     "@stdlib/ndarray-base-normalize-index": "^0.2.2",
     "@stdlib/ndarray-base-numel": "^0.2.2",
