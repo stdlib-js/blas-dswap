@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-14)
+## Unreleased (2024-09-16)
 
 <section class="features">
 
@@ -21,6 +21,7 @@
 
 ### Bug Fixes
 
+-   [`a90c34d`](https://github.com/stdlib-js/stdlib/commit/a90c34d316f09ce5dfe165439fbcb2785fcea5a0) - update error message
 -   [`8b1f86b`](https://github.com/stdlib-js/stdlib/commit/8b1f86b855e9f11a36ccf7f58a611650bf210078) - prevent writing to read-only ndarrays
 
 </section>
@@ -33,6 +34,7 @@
 
 <details>
 
+-   [`a90c34d`](https://github.com/stdlib-js/stdlib/commit/a90c34d316f09ce5dfe165439fbcb2785fcea5a0) - **fix:** update error message _(by Athan Reines)_
 -   [`2d7e925`](https://github.com/stdlib-js/stdlib/commit/2d7e9251e02cba556ad7e8b40ef90d5190d0d719) - **feat:** add support for stacks in `blas/sswap` [(#2898)](https://github.com/stdlib-js/stdlib/pull/2898) _(by Aman Bhansali, Athan Reines)_
 -   [`8b1f86b`](https://github.com/stdlib-js/stdlib/commit/8b1f86b855e9f11a36ccf7f58a611650bf210078) - **fix:** prevent writing to read-only ndarrays _(by Athan Reines)_
 -   [`2e25339`](https://github.com/stdlib-js/stdlib/commit/2e2533970e09cb59f3533d474ec32756f4ca4f81) - **feat:** add support for batched computation _(by Athan Reines)_
