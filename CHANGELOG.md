@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-20)
+## Unreleased (2024-09-23)
 
 <section class="features">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`d6b26e2`](https://github.com/stdlib-js/stdlib/commit/d6b26e2cd3ca1f5287b13304f1be7a3ac50bca2a) - **docs:** fix description _(by Athan Reines)_
 -   [`2e2f268`](https://github.com/stdlib-js/stdlib/commit/2e2f2681aa86405fd2a5d7cad8c48fe32a2b8cb5) - **refactor:** use `blas/tools/swap-factory` _(by Athan Reines)_
 -   [`a90c34d`](https://github.com/stdlib-js/stdlib/commit/a90c34d316f09ce5dfe165439fbcb2785fcea5a0) - **fix:** update error message _(by Athan Reines)_
 -   [`2d7e925`](https://github.com/stdlib-js/stdlib/commit/2d7e9251e02cba556ad7e8b40ef90d5190d0d719) - **feat:** add support for stacks in `blas/sswap` [(#2898)](https://github.com/stdlib-js/stdlib/pull/2898) _(by Aman Bhansali, Athan Reines)_
