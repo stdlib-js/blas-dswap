@@ -40,7 +40,8 @@
   "dependencies": {
     "@stdlib/blas-base-dswap": "^0.3.0",
     "@stdlib/blas-tools-swap-factory": "github:stdlib-js/blas-tools-swap-factory#main",
-    "@stdlib/types": "^0.4.3"
+    "@stdlib/types": "^0.4.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/array-float64": "^0.2.2",
