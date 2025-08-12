@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-28)
+## Unreleased (2025-08-12)
 
 <section class="features">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`0f7607a`](https://github.com/stdlib-js/stdlib/commit/0f7607a1d5bc88b5ee38d5091725678eafd304f6) - **docs:** remove trailing whitespace _(by Philipp Burckhardt)_
 -   [`d6b26e2`](https://github.com/stdlib-js/stdlib/commit/d6b26e2cd3ca1f5287b13304f1be7a3ac50bca2a) - **docs:** fix description _(by Athan Reines)_
 -   [`2e2f268`](https://github.com/stdlib-js/stdlib/commit/2e2f2681aa86405fd2a5d7cad8c48fe32a2b8cb5) - **refactor:** use `blas/tools/swap-factory` _(by Athan Reines)_
 -   [`a90c34d`](https://github.com/stdlib-js/stdlib/commit/a90c34d316f09ce5dfe165439fbcb2785fcea5a0) - **fix:** update error message _(by Athan Reines)_
@@ -51,10 +52,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Aman Bhansali
 -   Athan Reines
+-   Philipp Burckhardt
 
 </section>
 
