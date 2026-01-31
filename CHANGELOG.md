@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.3.0">
 
-## Unreleased (2025-08-25)
+## 0.3.0 (2026-01-31)
 
 <section class="features">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`2035f34`](https://github.com/stdlib-js/stdlib/commit/2035f344a1a469278042b7532f034dc6119933b3) - **docs:** add function documentation _(by Athan Reines)_
 -   [`0f7607a`](https://github.com/stdlib-js/stdlib/commit/0f7607a1d5bc88b5ee38d5091725678eafd304f6) - **docs:** remove trailing whitespace _(by Philipp Burckhardt)_
 -   [`d6b26e2`](https://github.com/stdlib-js/stdlib/commit/d6b26e2cd3ca1f5287b13304f1be7a3ac50bca2a) - **docs:** fix description _(by Athan Reines)_
 -   [`2e2f268`](https://github.com/stdlib-js/stdlib/commit/2e2f2681aa86405fd2a5d7cad8c48fe32a2b8cb5) - **refactor:** use `blas/tools/swap-factory` _(by Athan Reines)_
