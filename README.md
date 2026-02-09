@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@esm/index.mjs';
+import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@v0.3.1-esm/index.mjs';
 ```
 
 #### dswap( x, y\[, dim] )
@@ -136,7 +136,7 @@ v2 = y.get( 0, 0 );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@esm/index.mjs';
+import dswap from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-dswap@v0.3.1-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
