@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-03-16)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`419ec67`](https://github.com/stdlib-js/stdlib/commit/419ec67071942898599659a234990245f9d4f93f) - **bench:** refactor to use string interpolation in `blas/dswap` [(#10992)](https://github.com/stdlib-js/stdlib/pull/10992) _(by Partha Das)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Partha Das
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
